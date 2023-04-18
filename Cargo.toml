@@ -1,0 +1,37 @@
+[package]
+name = "auto-clicker"
+version = "0.1.0"
+authors = ["Allister Isaiah Harvey <a.i.harvey@icloud.com>"]
+edition = "2021"
+description = "A portable auto clicker built for Linux, macOS & Windows."
+license = "MIT"
+repository = "https://github.com/a-isaiahharvey/auto-clicker"
+keywords = ["auto_clicker"]
+categories = ["utilities"]
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[package.metadata.bundle]
+name = "Auto Clicker"
+identifier = "com.aisaiahharvey.autoclicker"
+version = "0.1.0"
+copyright = "Copyright (c) Allister Isaiah Harvey 2023. All rights reserved."
+short_description = "A portable auto clicker built for Linux, macOS & Windows."
+deb_depends = [
+    "libxcb-render0-dev",
+    "libxcb-shape0-dev",
+    "libxcb-xfixes0-dev",
+    "libxkbcommon-dev",
+    "libssl-dev",
+]
+
+[dependencies]
+egui = { version = "0.21.0", features = ["accesskit"] }
+egui_wgpu_backend = "0.22.0"
+egui_winit_platform = "0.18.0"
+epi = "0.17.0"
+tokio = { version = "1.27.0", features = ["rt-multi-thread", "macros"] }
+winit = "0.28.3"
+rdev = "0.5.2"
+env_logger = "0.10.0"
+log = "0.4.17"
+wgpu = "0.15.1"

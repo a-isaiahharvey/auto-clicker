@@ -4,8 +4,6 @@
   <b>A portable auto clicker built for Linux, macOS & Windows.</b>
  </p>
  <br>
- <br>
- <br>
 </div>
 
 ## Disclaimer
